@@ -274,7 +274,7 @@ jobs:
           pnpm run generate-icon
 
       - name: Build application
-        run: wails build -platform darwin/arm64
+        run: wails build -platform darwin/amd64
 
       - name: Create DMG
         run: |
