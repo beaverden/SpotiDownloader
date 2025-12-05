@@ -299,7 +299,14 @@ jobs:
           name: macos-arm
           path: dist/${{ env.APP_NAME }}.dmg
           retention-days: 7
-
+          
+      - name: Upload artifacts2
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-go
+          path: "build/bin/${{ env.APP_NAME }}.app"
+          retention-days: 7
+          
   build-linux:
     name: Build Linux
     runs-on: ubuntu-24.04
